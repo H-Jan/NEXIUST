@@ -57,6 +57,13 @@ const PropertySummary = database.define(
         isInt: true,
       },
     },
+    estimate: {
+      type: sequelize.INTEGER,
+      alllowNulll: false,
+      validate: {
+        isInt: true,
+      },
+    },
     beds: {
       type: sequelize.INTEGER,
       allowNull: false,
@@ -75,6 +82,14 @@ const PropertySummary = database.define(
       validate: {
         len: [8, 10],
         isAlphanumeric: true,
+      },
+    },
+    agent_id: {
+      type: sequelize.STRING,
+      allowNull: false,
+      validate: {
+        len: [7, 9],
+        isInt: true,
       },
     },
     days_listed: {
