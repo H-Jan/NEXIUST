@@ -1,8 +1,8 @@
 const sequelize = require('sequelize');
 const database = require('../../index.js');
 
-const User = database.define(
-  'users',
+const UserCredentials = database.define(
+  'UserCredentials',
   {
     id: {
       type: sequelize.INTEGER,
@@ -54,7 +54,7 @@ const User = database.define(
   }
 )
 
-User.sync()
+UserCredentials.sync()
   .then(() => {
     console.log('User database synced')
   })
@@ -62,4 +62,4 @@ User.sync()
     console.error(err)
   })
 
-module.exports = User;
+module.exports = UserCredentials;
