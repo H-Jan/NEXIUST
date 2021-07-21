@@ -10,6 +10,7 @@ const u_credentials = require('../../../database/models/users/credentials.js');
 const u_profile = require('../../../database/models/users/profile');
 const p_summary = require('../../../database/models/property/summary.js');
 const p_overview = require('../../../database/models/property/overview.js');
+const p_agency = require('../../../database/models/property/agency.js');
 
 const app = express();
 
