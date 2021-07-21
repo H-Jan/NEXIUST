@@ -8,6 +8,7 @@ const path = require('path');
 const database = require('../../../database/index.js');
 const u_credentials = require('../../../database/models/users/credentials.js');
 const u_profile = require('../../../database/models/users/profile');
+
 const p_summary = require('../../../database/models/property/summary.js');
 const p_overview = require('../../../database/models/property/overview.js');
 const p_agency = require('../../../database/models/property/agency.js');
@@ -18,6 +19,8 @@ const p_cost = require('../../../database/models/property/cost.js');
 const p_market = require('../../../database/models/property/value.js');
 const p_neighborhood = require('../../../database/models/property/neighborhood.js');
 const p_schools = require('../../../database/models/property/schools.js');
+
+const i_summary = require('../../../database/models/investment/summary.js')
 
 const app = express();
 
