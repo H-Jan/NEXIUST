@@ -13,7 +13,8 @@ const p_overview = require('../../../database/models/property/overview.js');
 const p_agency = require('../../../database/models/property/agency.js');
 const p_features = require('../../../database/models/property/features.js');
 const p_hoa = require('../../../database/models/property/hoa.js');
-const p_land = require('../../../database/models/property/land.js')
+const p_land = require('../../../database/models/property/land.js');
+const p_cost = require('../../../database/models/property/cost.js');
 
 const app = express();
 
