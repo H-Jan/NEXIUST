@@ -20,7 +20,8 @@ const p_market = require('../../../database/models/property/value.js');
 const p_neighborhood = require('../../../database/models/property/neighborhood.js');
 const p_schools = require('../../../database/models/property/schools.js');
 
-const i_summary = require('../../../database/models/investment/summary.js')
+const i_summary = require('../../../database/models/investment/summary.js');
+const i_details = require('../../../database/models/investment/details.js')
 
 const app = express();
 
