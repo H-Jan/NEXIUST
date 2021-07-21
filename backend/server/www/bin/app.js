@@ -21,7 +21,8 @@ const p_neighborhood = require('../../../database/models/property/neighborhood.j
 const p_schools = require('../../../database/models/property/schools.js');
 
 const i_summary = require('../../../database/models/investment/summary.js');
-const i_details = require('../../../database/models/investment/details.js')
+const i_details = require('../../../database/models/investment/details.js');
+const i_assessment = require('../../../database/models/investment/assessment.js');
 
 const app = express();
 
