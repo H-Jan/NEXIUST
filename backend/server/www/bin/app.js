@@ -11,6 +11,7 @@ const u_profile = require('../../../database/models/users/profile');
 const p_summary = require('../../../database/models/property/summary.js');
 const p_overview = require('../../../database/models/property/overview.js');
 const p_agency = require('../../../database/models/property/agency.js');
+const p_features = require('../../../database/models/property/features.js')
 
 const app = express();
 
