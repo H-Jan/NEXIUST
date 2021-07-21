@@ -43,6 +43,14 @@ const PropertyAgency = database.define(
         isNumeric: true
       }
     },
+    broker_location: {
+      type: sequelize.STRING,
+      allowNull: false,
+      default: 'Orange County, CA',
+      validate: {
+        isAlpha: true,
+      }
+    },
     mls_name: {
       type: sequelize.STRING,
       allowNull: false,

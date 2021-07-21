@@ -16,7 +16,7 @@ const PropertySchools = database.define(
       allowNull: false,
       default: 'school',
       validate: {
-        isNumeric: true,
+        isAlpha: true,
       }
     },
     score: {
@@ -32,7 +32,7 @@ const PropertySchools = database.define(
       allowNull: false,
       default: 'K-5',
       validate: {
-        isNumeric: true,
+        isApha: true,
       }
     },
     students: {
@@ -48,7 +48,7 @@ const PropertySchools = database.define(
       allowNull: false,
       default: 0.0,
       validate: {
-        isNumeric: true
+        isFloat: true
       }
     },
     reviews_score: {
@@ -56,7 +56,7 @@ const PropertySchools = database.define(
       allowNull: false,
       default: 0.0,
       validate: {
-        isNumeric: true,
+        isFloat: true,
       }
     },
     reviews_count: {
@@ -72,7 +72,7 @@ const PropertySchools = database.define(
       allowNull: false,
       default: 'public',
       validate: {
-        isNumeric: true,
+        isApha: true,
         isIn: [['public', 'private']]
       }
     },
@@ -81,7 +81,7 @@ const PropertySchools = database.define(
       allowNull: false,
       default: 'elementary',
       validate: {
-        isNumeric: true,
+        isApha: true,
         isIn: [['elementary', 'middle', 'high']]
       }
     },
