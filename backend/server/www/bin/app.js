@@ -17,6 +17,7 @@ const p_land = require('../../../database/models/property/land.js');
 const p_cost = require('../../../database/models/property/cost.js');
 const p_market = require('../../../database/models/property/value.js');
 const p_neighborhood = require('../../../database/models/property/neighborhood.js');
+const p_schools = require('../../../database/models/property/schools.js');
 
 const app = express();
 
