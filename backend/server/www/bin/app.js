@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 
 const database = require('../../../database/index.js');
-const u_credentials = require('../../../database/models/users/credentials.js');
+const u_user = require('../../../database/models/users/user.js');
 const u_profile = require('../../../database/models/users/profile');
 
 const p_summary = require('../../../database/models/property/summary.js');

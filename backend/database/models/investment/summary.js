@@ -2,7 +2,7 @@ const sequelize = require('sequelize');
 const database = require('../../index.js');
 
 const PropertySummary = require('../property/summary.js');
-const UserCredentials = require('../users/credentials.js');
+const UserCredentials = require('../users/user.js');
 
 
 const InvestmentSummary = database.define(
