@@ -62,7 +62,7 @@ PropertySummary.hasOne(PropertyOverview);
 
 PropertyOverview.sync()
   .then(() => {
-    console.log('User database synced')
+    //console.log('User database synced')
   })
   .catch((err) => {
     console.error(err)

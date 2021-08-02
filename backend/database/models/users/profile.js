@@ -1,6 +1,6 @@
 const sequelize = require('sequelize');
 const database = require('../../index.js');
-const UserCredentials = require('./credentials');
+const UserCredentials = require('./user.js');
 
 const UserProfiles = database.define(
   'UserProfiles',
@@ -64,7 +64,7 @@ UserCredentials.hasOne(UserProfiles)
 
 UserProfiles.sync()
   .then(() => {
-    console.log('User database synced')
+    //console.log('User database synced')
   })
   .catch((err) => {
     console.error(err)

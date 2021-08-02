@@ -4,6 +4,10 @@ const helmet = require('helmet');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const path = require('path');
+const axios = require('axios');
+
+const app = express();
+const routes = require('../../../routers/main.js');
 
 const database = require('../../../database/index.js');
 const u_user = require('../../../database/models/users/user.js');
@@ -24,11 +28,14 @@ const i_summary = require('../../../database/models/investment/summary.js');
 const i_details = require('../../../database/models/investment/details.js');
 const i_assessment = require('../../../database/models/investment/assessment.js');
 
-const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended:true }));
 app.use(morgan('dev'));
+
+app.use(express.static(path.join(__dirname, '../../../client/index.html')));
+
+app.use('/', routes);
 
 module.exports = app;
