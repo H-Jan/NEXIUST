@@ -1,9 +1,10 @@
 const sequelize = require('sequelize');
 const database = require('../../index.js');
-const UserCredentials = require('./user.js');
 
-const UserProfiles = database.define(
-  'UserProfiles',
+const User = require('./user.js');
+
+const Profile = database.define(
+  'Profile',
   {
     id: {
       type: sequelize.INTEGER,
@@ -60,9 +61,9 @@ const UserProfiles = database.define(
   }
 )
 
-UserCredentials.hasOne(UserProfiles)
+User.hasOne(Profile)
 
-UserProfiles.sync()
+Profile.sync()
   .then(() => {
     //console.log('User database synced')
   })
@@ -70,4 +71,4 @@ UserProfiles.sync()
     console.error(err)
   })
 
-module.exports = UserProfiles;
+module.exports = Profile;

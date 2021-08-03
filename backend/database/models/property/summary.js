@@ -84,6 +84,14 @@ const PropertySummary = database.define(
         isAlphanumeric: true,
       },
     },
+    parcel_number: {
+      type: sequelize.INTEGER,
+      allowNull: false
+    },
+    listing_id: {
+      type: sequelize.INTEGER,
+      allowNull: false
+    },
     agent_id: {
       type: sequelize.STRING,
       allowNull: false,
