@@ -7,7 +7,8 @@ const path = require('path');
 const axios = require('axios');
 
 const app = express();
-const routes = require('../../../routers/main.js');
+
+// The following link all of the databse models to the server.
 
 const database = require('../../../database/index.js');
 const u_user = require('../../../database/models/users/user.js');
@@ -28,6 +29,12 @@ const i_summary = require('../../../database/models/investment/summary.js');
 const i_details = require('../../../database/models/investment/details.js');
 const i_assessment = require('../../../database/models/investment/assessment.js');
 
+// the foollowinig is all for testing to make sure all the user methods work
+const testingUser = require('../../../testing/testUser.js');
+
+// The following link all of the routes to the server
+const userRoutes = require('../../../routers/users/user.js');
+
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -36,6 +43,6 @@ app.use(morgan('dev'));
 
 app.use(express.static(path.join(__dirname, '../../../client/index.html')));
 
-app.use('/', routes);
+app.use('/api/users', userRoutes);
 
 module.exports = app;

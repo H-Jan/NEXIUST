@@ -14,7 +14,7 @@ const User = database.define(
       allowNull: false,
       unique: true,
       validate: {
-        isEmail: true,
+        isAlphanumeric: true,
         min: 6,
         max: 16
       }
@@ -43,10 +43,12 @@ const User = database.define(
       type: sequelize.INTEGER,
       allowNull: false
     },
-    created: {
-      type: sequelize.DATEONLY,
+    reference_id: {
+      type: sequelize.STRING,
       allowNull: false,
-      defaultValue: new Date()
+      validate: {
+        isAlphanumeric: true
+      }
     },
   },
   {
