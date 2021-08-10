@@ -28,7 +28,6 @@ const getUser = (req, res) => {
   var id = req.query.username;
   User.findAll({ where: { username: id }})
   .then(users => {
-    console.log(users)
     res.send(users);
   }).catch(err => {
     res.status(500).send({
@@ -38,11 +37,11 @@ const getUser = (req, res) => {
 }
 
 const updateUser = (req, res) => {
-  var body = req.query.body;
-  var id = req.query.username;
-  User.update(updatedUser, { where: { username: id }})
+  var user = req.body;
+  var selectedUser = user.originUsername;
+  User.update(user, { where: { username: selectedUser }})
   .then(users => {
-    res.send('successfull delete')
+    res.send('successfull updated')
   }).catch(err => {
     res.status(500).send({
       message: err.message || 'Some error occured while retrieving notes'
@@ -53,6 +52,7 @@ const updateUser = (req, res) => {
 
 const deleteUser = (req, res) => {
   var id = req.query.username;
+  console.log(id)
   User.destroy({ where: { username: id }})
   .then(users => {
     res.send('successfull delete')
